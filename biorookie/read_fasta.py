@@ -1,5 +1,4 @@
 import re
-import os
 def read_fasta(file):
 	#Initializations
 	seq=""
@@ -21,3 +20,4 @@ def read_fasta(file):
 	print("-"*55+"\n"+"Successfully read the FASTA file!"+"\n"+"-"*55)
 	result=[number,describe,seq]
 	return(result)
+	

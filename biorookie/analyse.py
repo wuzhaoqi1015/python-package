@@ -1,17 +1,19 @@
 import re
-import os
 def base(file):
 	if("." in file):
 		line=open(file,"r")
+		outfile_name=file.split("_")[0]+"_base"+".txt"
 	elif(type(file)==str):
 		line=file
+		outfile_name="_base"+".txt"
 	elif(type(file)==list):
 		line=file[2]
+		outfile_name=file[0]+"_base"+".txt"
 	else:
 		return "Please enter the correct parameters!"
 	#Initializations
+	line=line.upper()
 	seq="";sum_a=0;sum_t=0;sum_c=0;sum_g=0
-	outfile_name=file.split("_")[0]+"_anal"+".txt"
 	output=open(outfile_name,"w")
 	#Call the built-in function to count the number of each base.
 	sum_a=line.count("A")+sum_a
@@ -32,19 +34,20 @@ def complement(seq):
 	seq = seq.upper()
 	#For the first time, replace with lowercase letters, indicating that the base has been replaced to prevent repeated replacement.
 	seq = seq.replace("A","t")		
-	#Call the built-in function "replace" to change A to t
 	seq = seq.replace("T","a")		
-	#Call the built-in function "replace" to change T to a
 	seq = seq.replace("C","g")		
-	#Call the built-in function "replace" to change C to g
 	seq = seq.replace("G","c")		
-	#Call the built-in function "replace" to change G to c
 	return seq.upper()
 def reverse_comple(file):
-	seq_name=file.split(".")[0]+"_rc"+".txt"
+	seq_name="_rc"+".txt"
 	output=open(seq_name,"w")
-	for line in open(file):
+	if("." in file):
+		line=open(file,"r")
 		newline=complement(line)[::-1]
-		print(newline,file=output)
+	else:
+		line=file
+		newline=complement(line)[::-1]
 	newline=newline.replace("\n","")
+	print(newline,file=output)
 	return(newline)
+	

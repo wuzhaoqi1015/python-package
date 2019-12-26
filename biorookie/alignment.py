@@ -24,12 +24,6 @@ def alignment(file1,file2,score=[4,-5,-4]):
 	def get_match_score(a1,a2):
 		sscore=score_table[a1][a2]
 		return sscore
-	def get_matrix_max(ma):
-		maxx=ma.max()
-		for i in range(0,length_2+1):
-			for j in range(0,length_1+1):
-				if ma[i][j]==maxx:
-					return (i,j)	
 	for i in range(0,length_2+1):
 		for j in range(0,length_1+1):
 			if i == 0 or j == 0:
