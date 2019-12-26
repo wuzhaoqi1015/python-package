@@ -1,0 +1,13 @@
+def helpme():
+	print("Package name:Biorooike")
+	print("—"*180+"\n"+"Package version: V1.1.0")
+	print("—"*180+"\n"+"Author's words:"+"\n"+"\t"+"Thank you for using my package!This package is prepared during my scientific research training and is used for the final report in class. There are a lot of modules and functions related to the analysis of Bioinformatics in the package. Of course, You can find it by name, the functions are very simple and the performance is not good enough. As a student, thank you for your advice and criticism. ")
+	print("—"*180+"\n"+"All functions in the package are as follows:"+"\n"+"—"*180)
+	print("\t"+"Function"+"\t"+"Description"+"\t"+"Output"+"\t"+"Return"+"\n"+"—"*180)
+	print("\t"+"1.download_ncbi(acc,debase='nucleotide',type='fasta') "+"||"+" For downloading data from NCBI "+"||"+" files "+"||"+" None")
+	print("\t"+"2.read_fasta(file) "+"||"+" For reading files in FASTA format "+"||"+" Ouput*_seq.txt "+"||"+" [number,describe,seq]")
+	print("\t"+"3.read_genbank(file) "+"||"+" For reading files in GENBANK format "+"||"+" *_seq.txt "+"||"+" [number,describe,seq]")
+	print("\t"+"4.base(seq) "+"||"+" Calculating the base ratio of a sequence "+"||"+" *_anal.txt "+"||"+" {A:ratio,T:ratio,C:ratio,G:ratio}")
+	print("\t"+"5.reverse_comple(seq) "+"||"+" Finding the reverse complementary sequence of a sequence "+"||"+" *_rc.txt "+"||"+" seq")
+	print("\t"+"6.alignment(seq1,seq2,score=[4,-5,-4]) "+"||"+" Global alignment for two sequences "+"||"+" result_align.txt "+"||"+" [al_seq1,al_seq2,al_score]")
+	print("—"*180+"\n"+"I would appreciate it if you could send me an email to respond to the package's questions. "+"Email：1027127497@qq.com"+"\n"+"—"*180)
