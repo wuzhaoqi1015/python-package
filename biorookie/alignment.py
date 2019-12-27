@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-def alignment(file1,file2,score=[4,-5,-4]):
+def alignment(file1,file2,score=[5,-2,-6]):
 	outfile_name="result_align"+".txt"
 	output=open(outfile_name,"w")
 	if("." in file1):
@@ -55,6 +55,7 @@ def alignment(file1,file2,score=[4,-5,-4]):
 			j=j-1
 	score_final=score_matrix.max()
 	print("-"*30+"\n"+"Successfully alignment!"+"\n"+"-"*30)
+	print("Score system:"+"\n"+" match:"+str(score[0])+"\n"+" mismatch:"+str(score[1])+"\n"+" gap:"+str(score[2]))
 	print("Alignment:")
 	print(" "+"Sequence1:"+s1[::-1]+'\n'+" "+"Sequence2:"+s2[::-1]+"\n"+"-"*30)
 	print("Dynamc programming matrix:")

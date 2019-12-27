@@ -16,11 +16,11 @@ b=rk.read_fasta(accf[1])
 a2=rk.read_genbank(accg[0])
 b2=rk.read_genbank(accg[1])
 #4.Calculate base frequency
-c=rk.analyse.base(a[2])
-d=rk.analyse.base(b[2])
+c=rk.base(a[2])
+d=rk.base(b[2])
 #5.Finding the reverse complementary sequence
-e=rk.analyse.reverse_comple(a[2])
-f=rk.analyse.reverse_comple(b[2])
+e=rk.reverse_comple(a[2])
+f=rk.reverse_comple(b[2])
 #6.Pairwise alignment
 g=rk.alignment(a[2],b[2])
 
